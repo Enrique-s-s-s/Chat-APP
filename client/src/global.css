@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #121212; 
+  --secondary-bg: #1e1e1e; 
+  --primary-text: #e0e0e0; 
+  --secondary-text: #bb86fc; 
+  --button-bg: #bb86fc; 
+  --button-bg-hover: #9a67db;
+  --button-text-color: #121212; 
+  --input-bg: #333;
+  --input-border: #444;
+  --input-border-focus: #bb86fc; 
+  --chat-message-bg: #333; 
+  --chat-message-hover-bg: #444; 
+  --font-family: 'Arial', sans-serif;
+  --font-size: 1rem; 
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: var(--secondary-text);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--button-bg-hover);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  background-color: var(--input-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+}
